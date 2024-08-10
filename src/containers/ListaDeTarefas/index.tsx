@@ -22,22 +22,24 @@ const tarefas = [
   }
 ]
 
-const ListaDeTarefas = () => (
-  <Container>
-    <p>2 tarefas marcadas como: &quot;categoria&quot; e &quot;termo&quot;</p>
-    <ul>
-      {tarefas.map((t) => (
-        <li key={t.titulo}>
-          <Tarefa
-            descricao={t.descricao}
-            titulo={t.titulo}
-            status={t.status}
-            prioridade={t.prioridade}
-          />
-        </li>
-      ))}
-    </ul>
-  </Container>
-)
+const ListaDeTarefas = () => {
+  return (
+    <Container>
+      <p>2 tarefas marcadas como: &quot;categoria&quot; e &quot;termo&quot;</p>
+      <ul>
+        {tarefas.map((t) => (
+          <li key={t.titulo}>
+            <Tarefa
+              descricao={t.descricao}
+              titulo={t.titulo}
+              status={t.status}
+              prioridade={t.prioridade}
+            />
+          </li>
+        ))}
+      </ul>
+    </Container>
+  )
+}
 
 export default ListaDeTarefas
